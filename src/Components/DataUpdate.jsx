@@ -1,219 +1,12 @@
-// // datepiker import componnent start
-// import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-// import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-// import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
-// // datepiker import componnent end
-
-// const DataUpdate = () => {
-
-
-
-//   const busData = (event) =>{
-//       event.preventDefault();
-//   const form = event.target;
-//   const BusName = form.busName.value;
-//   const superVisorNum = form.superVisorNum.value;
-//   const parSeatPrice = form.seatPrice.value;
-//   const busRegNum = form.busRegNum.value;
-//   const destinationFrom = form.destinationFrom.value;
-//   const destinationTo = form.destinationTo.value;
-//   const seatType = form.seatType.value;
-//   const availableSeat = form.availableSeat.value;
-//   const ImgUrl = form.busUrl.value;
-//   const journeyStartDayDate = form.selaectedDateTimeFrom.value;
-//   const journeyEndDayDate = form.selaectedDateTimeTo.value;
-// const busDatas = {
-//   BusName,
-//   superVisorNum,
-//   parSeatPrice,
-//   busRegNum,
-//   destinationFrom,
-//   destinationTo,
-//   seatType,
-//   availableSeat,
-//   ImgUrl,
-//   journeyStartDayDate,
-//   journeyEndDayDate
-
-//   }
-
-// console.log(busDatas)
-
-//   }
-//   return (
-//     <div>
-//       <div className="hero ">
-//         <div className="hero-content ">
-
-//           <div className="bg-base-100 shadow-2xl">
-//             <p>BUS INFORMATION</p>
-//             <form onSubmit={busData} className="card-body">
-//               <div className="form-control">
-
-//                 <div className='flex gap-2'>
-//                   <div>
-//                     <label className="label">
-//                       <span className="label-text">BUS NAME</span>
-//                     </label>
-//                     <input name='busName' type="BusName" placeholder="BUS NAME" className="input input-bordered" required />
-//                   </div>
-//                   <div>
-//                     <label className="label">
-//                       <span className="label-text">SUPER VISOR NUMBER</span>
-//                     </label>
-//                     <input name='superVisorNum' type="number" placeholder="SUPER VISOR NUMBER" className="input input-bordered" required />
-//                   </div>
-//                 </div>
-
-//               </div>
-//               <div className="form-control">
-//                 <div className='flex gap-2'>
-//                   <div>
-//                     <label className="label">
-//                       <span className="label-text">SEAT PRICE</span>
-//                     </label>
-//                     <input type="number" name='seatPrice' placeholder="SEAT PRICE" className="input input-bordered" required />
-//                   </div>
-//                   <div>
-//                     <label className="label">
-//                       <span className="label-text">BUS REG NUM</span>
-//                     </label>
-//                     <input name='busRegNum' type="text" placeholder="BUS REG NUM" className="input input-bordered" required />
-
-//                   </div>
-
-
-//                 </div>
-
-
-//               </div>
-
-
-//               <div className="form-control">
-//                 <div className='flex gap-2'>
-//                   <div>
-//                     <label className="label">
-//                       <span className="label-text">DESTINATION FROM</span>
-//                     </label>
-//                     <select value={destinationFrom} onChange={desChangeFrom} className="select select-bordered w-full max-w-xs">
-//                       <option disabled selected>STARTING DESTINATION</option>
-//                       <option value="DHAKA">DHAKA</option>
-//                       <option value="COMILLA">COMILLA</option>
-//                       <option value="CHITTAGONG">CHITTAGONG</option>
-//                       <option value="COXBAZZAR">COXBAZZAR</option>
-//                     </select>
-//                   </div>
-//                   <div>
-//                     <label className="label">
-//                       <span className="label-text">DESTINATION TO</span>
-//                     </label>
-//                     <select value={destinationTo} className="select select-bordered ">
-//                       <option disabled selected>ENDING DESTINATION</option>
-//                       <option value="DHAKA">DHAKA</option>
-//                       <option value="COMILLA">COMILLA</option>
-//                       <option value="CHITTAGONG">CHITTAGONG</option>
-//                       <option value="COXBAZZAR">COXBAZZAR</option>
-//                     </select>
-//                   </div>
-
-
-
-//                 </div>
-
-
-//               </div>
-
-
-//               <div className="form-control">
-//                 <div className='flex gap-2'>
-//                   <div>
-//                     <label className="label">
-//                       <span className="label-text">SEAT TYPE</span>
-//                     </label>
-//                     <select value={seatType} className="select select-bordered w-full max-w-xs">
-//                       <option disabled selected>SEAT TYPE</option>
-//                       <option value="AC">AC</option>
-//                       <option value="NON-AC">NON-AC</option>
-//                     </select>
-//                   </div>
-//                   <div>
-//                     <label className="label">
-//                       <span className="label-text">BUS SEAT AVAILABLE</span>
-//                     </label>
-//                     <input name='availableSeat' type="number" placeholder="BUS SEAT AVAILABLE" className="input input-bordered" required />
-//                   </div>
-//                   <div>
-//                     <label className="label">
-//                       <span className="label-text">BUS URL</span>
-//                     </label>
-//                     <input name='busUrl' type="text" placeholder="BUS IMAGE URL" className="input input-bordered" required />
-//                   </div>
-
-
-
-//                 </div>
-
-
-//               </div>
-
-
-//               {/* time */}
-//               <div className="form-control">
-//                 <div className='flex gap-2'>
-//                   <div>
-//                     <label className="label">
-//                       <span className="label-text">JOURNEY START DATE & TIME</span>
-//                     </label>
-//                     <LocalizationProvider dateAdapter={AdapterDayjs}>
-//                       <DemoContainer components={['DateTimePicker']}>
-//                         <DateTimePicker value={selaectedDateTimeFrom} label="Basic date time picker" />
-//                       </DemoContainer>
-//                     </LocalizationProvider>
-//                   </div>
-//                   <div>
-//                     <label className="label">
-//                       <span className="label-text">JOURNEY START DATE & TIME</span>
-//                     </label>
-//                     <LocalizationProvider dateAdapter={AdapterDayjs}>
-//                       <DemoContainer components={['DateTimePicker']}>
-//                         <DateTimePicker value={selaectedDateTimeTo} label="Basic date time picker" />
-//                       </DemoContainer>
-//                     </LocalizationProvider>
-//                   </div>
-
-
-
-//                 </div>
-
-
-//               </div>
-//               {/* time */}
-
-
-//               <div className="form-control mt-6">
-
-//                 <input className="btn btn-error aab" type="submit" value="SUBMIT" />
-//               </div>
-//             </form>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default DataUpdate
-
-
-//------------------------------------------------------------------------------------------------------
-
 
 import React, { useState } from 'react';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { TimePicker } from '@mui/x-date-pickers/TimePicker';
+import Swal from 'sweetalert2';
+import dayjs from 'dayjs';
 
 function BusInfoForm() {
   // State management for form inputs
@@ -227,8 +20,10 @@ function BusInfoForm() {
     destinationFrom: '',
     destinationTo: '',
     seatType: '',
-    journeyStart: null,
-    journeyEnd: null,
+    journeyStartTime: null,
+    journeyEndTime: null,
+    journeyStartDate: null,
+    journeyEndDate: null,
   });
 
   // Handle change for all inputs
@@ -240,22 +35,88 @@ function BusInfoForm() {
     }));
   };
 
-  // Handle DateTime change
-  const handleDateTimeChange = (name, newValue) => {
+  // Handle Date change
+  const handleDateChange = (name, newValue) => {
     setFormData((prev) => ({
       ...prev,
-      [name]: newValue,
+      [name]: newValue ,
     }));
   };
+//
+//Handle Time Change
+  const handleTimeChange = (name, newValue) => {
+    setFormData((prev) => ({
+      ...prev,
+      [name]: newValue ,
+    }));
+  };
+  //
 
-console.log(formData)
+//time format manage start
+const extractTime = (time) =>dayjs(time).format('HH:mm')
+//time format manage end
+
+//Date Format start
+const extractDate = (date) =>dayjs(date).format('DD/MM/YYYY')
+//Date Format End
+
+
 
   // Form submission handler
-  const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
     event.preventDefault(); // Prevent page reload
     console.log('Form Data:', formData); // Log form data
     // Here, you can send data to the backend or perform further actions
+
+    // Time Formatting Function start
+    const formattedDateTime = {
+      ...formData,
+      journeyStartTime: extractTime(formData.journeyStartTime),
+      journeyEndTime: extractTime(formData.journeyEndTime),
+      journeyStartDate: extractDate(formData.journeyStartDate),
+      journeyEndDate: extractDate(formData.journeyEndDate),
+    };
+    console.log("Submitted Date:",formattedDateTime)
+ //
+
+    fetch("http://localhost:5000/bus", {
+      method: "POST",
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(formattedDateTime)
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.insertedId) {
+          setFormData({
+            busName: '',
+            superVisorNum: '',
+            seatPrice: '',
+            busRegNum: '',
+            availableSeat: '',
+            busUrl: '',
+            destinationFrom: '',
+            destinationTo: '',
+            seatType: '',
+            journeyStartTime: null,
+            journeyEndTime: null,
+            journeyStartDate: null,
+            journeyEndDate: null,
+          })
+          Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'User Profile Updated Succesfully',
+            showConfirmButton: false,
+            timer: 1500
+          });
+        }
+      })
+
   };
+
+
 
   return (
     <div className="hero">
@@ -423,13 +284,13 @@ console.log(formData)
               <div className="flex gap-2">
                 <div>
                   <label className="label">
-                    <span className="label-text">JOURNEY START DATE & TIME</span>
+                    <span className="label-text">JOURNEY START DATE</span>
                   </label>
                   <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DemoContainer components={['DateTimePicker']}>
-                      <DateTimePicker
-                        value={formData.journeyStart}
-                        onChange={(newValue) => handleDateTimeChange('journeyStart', newValue)}
+                    <DemoContainer components={['DatePicker']}>
+                      <DatePicker
+                        value={formData.journeyStartDate}
+                        onChange={(newValue) => handleDateChange('journeyStartDate', newValue)}
                         label="Start Date & Time"
                       />
                     </DemoContainer>
@@ -437,14 +298,47 @@ console.log(formData)
                 </div>
                 <div>
                   <label className="label">
-                    <span className="label-text">JOURNEY END DATE & TIME</span>
+                    <span className="label-text">JOURNEY END DATE</span>
                   </label>
                   <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DemoContainer components={['DateTimePicker']}>
-                      <DateTimePicker
-                        value={formData.journeyEnd}
-                        onChange={(newValue) => handleDateTimeChange('journeyEnd', newValue)}
-                        label="End Date & Time"
+                    <DemoContainer components={['DatePicker']}>
+                      <DatePicker
+                        value={formData.journeyEndDate}
+                        onChange={(newValue) => handleDateChange('journeyEndDate', newValue)}
+                        label="Start Date & Time"
+                      />
+                    </DemoContainer>
+                  </LocalizationProvider>
+                </div>
+              </div>
+            </div>
+
+            <div className="form-control">
+              <div className="flex gap-2">
+                <div>
+                  <label className="label">
+                    <span className="label-text">JOURNEY START TIME</span>
+                  </label>
+                  <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DemoContainer components={['TimePicker']}>
+                      <TimePicker
+                        value={formData.journeyStartTime}
+                        onChange={(newValue) => handleTimeChange('journeyStartTime', newValue)}
+                        label="Start Time"
+                      />
+                    </DemoContainer>
+                  </LocalizationProvider>
+                </div>
+                <div>
+                  <label className="label">
+                    <span className="label-text">JOURNEY END TIME</span>
+                  </label>
+                  <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DemoContainer components={['TimePicker']}>
+                      <TimePicker
+                        value={formData.journeyEndTime}
+                        onChange={(newValue) => handleTimeChange('journeyEndTime', newValue)}
+                        label="Start Time"
                       />
                     </DemoContainer>
                   </LocalizationProvider>
@@ -463,18 +357,6 @@ console.log(formData)
 }
 
 export default BusInfoForm;
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

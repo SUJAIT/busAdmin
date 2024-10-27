@@ -5,6 +5,8 @@ import DashBoard from "./DashBoard";
 import AllServices from "./AllServices";
 import Login from "./Authentication/Login";
 import Register from "./Authentication/Register";
+import DashHome from "./DashboardComponents/DashHome";
+import BusInfo from "./DashboardComponents/BusInfo";
 
 
 export const router = createBrowserRouter([
@@ -18,7 +20,18 @@ export const router = createBrowserRouter([
 },
 {
     path:"/dashboard",
-    element:<DashBoard></DashBoard>
+    element:<DashBoard></DashBoard>,
+children:[
+   {
+     path:"dashome",
+    element:<DashHome></DashHome>
+},
+{
+    path:'businfo',
+    element:<BusInfo></BusInfo>
+}
+
+]
 },
 {
     path:"/allservices",
