@@ -35,7 +35,7 @@ console.log(datas)
       
       <p>Id:{datas.length}</p>
       {
-      datas.map(data=><BusInfoCard key={data._id} data={data}></BusInfoCard>)
+      datas.map(data=><BusInfoCard key={data._id} data={data} setData={setData}></BusInfoCard>)
       }
     </div>
   )
