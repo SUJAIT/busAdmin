@@ -24,7 +24,7 @@ const DashBoard = () => {
      <li> <Link to={'/'}>Home</Link></li>
      <li> <Link to={'businfo'}>ALL BUS</Link></li>
       
-      <li><a>Sidebar Item 2</a></li>
+      <li><Link to={'passangerdata'}>Passenger Data</Link></li>
     </ul>
   </div>
 </div>

@@ -7,6 +7,7 @@ import Login from "./Authentication/Login";
 import Register from "./Authentication/Register";
 import DashHome from "./DashboardComponents/DashHome";
 import BusInfo from "./DashboardComponents/BusInfo";
+import PassengerData from "./DashboardComponents/PassengerData";
 
 
 export const router = createBrowserRouter([
@@ -29,6 +30,9 @@ children:[
 {
     path:'businfo',
     element:<BusInfo></BusInfo>
+},{
+    path:"passangerdata",
+    element:<PassengerData/>
 }
 
 ]
@@ -45,6 +49,8 @@ children:[
     path:"/register",
     element:<Register/>
 },
+
+
     ]
     }
 

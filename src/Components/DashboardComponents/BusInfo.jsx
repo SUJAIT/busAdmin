@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import BusInfoCard from './BusInfoCard';
 import './BusInfoCard.css'
 
@@ -33,7 +33,7 @@ console.log(datas)
   return (
     <div className='grid gap-4 grid-row-1'>
       
-      <p>Id:{datas.length}</p>
+   
       {
       datas.map(data=><BusInfoCard key={data._id} data={data} setData={setData}></BusInfoCard>)
       }

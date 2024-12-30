@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import './BusInfoCard.css'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 const BusInfoCard = ({ data,setData }) => {

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
@@ -35,22 +35,14 @@ const Navbar = () => {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl" href='/'>
+        <img className='logo' src="https://i.ibb.co.com/wNMGSBL/Untitled-design.png" alt="" />
+    </a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><Link to={"/dashboard"}>DASHBOARD</Link></li>
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
+ 
     </ul>
   </div>
   <div className="navbar-end">
