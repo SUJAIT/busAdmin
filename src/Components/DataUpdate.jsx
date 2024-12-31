@@ -7,8 +7,10 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import Swal from 'sweetalert2';
 import dayjs from 'dayjs';
+import useRequireAuth from './hook/userChack';
 
 function BusInfoForm() {
+  useRequireAuth()
   // State management for form inputs
   const [formData, setFormData] = useState({
     busName: '',
@@ -57,7 +59,7 @@ const extractTime = (time) =>dayjs(time).format('HH:mm')
 //time format manage end
 
 //Date Format start
-const extractDate = (date) =>dayjs(date).format('DD/MM/YYYY')
+const extractDate = (date) =>dayjs(date).format('YYYY-MM-DD')
 //Date Format End
 
 
@@ -107,7 +109,7 @@ const extractDate = (date) =>dayjs(date).format('DD/MM/YYYY')
           Swal.fire({
             position: 'top-center',
             icon: 'success',
-            title: 'User Profile Updated Succesfully',
+            title: 'New Data Added',
             showConfirmButton: false,
             timer: 1500
           });

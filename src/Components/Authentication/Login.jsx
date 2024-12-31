@@ -45,7 +45,7 @@ const Login = () => {
  
     <div className="w2 regParent">
     <div className='regLogo'>
-          <img src="https://www.jatri.co/_nuxt/jatri-logo.19582a96.svg" alt="" />
+    <img className='logo' src="https://i.ibb.co.com/k1Dgx1Z/Screenshot-2024-12-29-232050-removebg-preview.png" alt="" />
    </div>
  <div className="hero-content flex-col lg:flex-row-reverse">
    <div className="text-center lg:text-left">
@@ -53,7 +53,7 @@ const Login = () => {
    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
     
 <div>
-  <p className='mt-4 text-2xl font-semibold'>Log in to Jatri</p>
+  <p className='mt-4 text-2xl font-semibold text-center'>Log in to Jabo</p>
 </div>
 
      <form onSubmit={handeLogin} className="card-body ">
@@ -69,9 +69,9 @@ const Login = () => {
            <span className="label-text">Password</span>
          </label>
          <input name='password' type="password" placeholder="password" className="input input-bordered" required />
-         <label className="label">
+         {/* <label className="label">
            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-         </label>
+         </label> */}
        </div>
        <div className="form-control mt-6">
        <input className="btn btn-error aab" type="submit" value="Login"/>

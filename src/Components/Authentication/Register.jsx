@@ -39,7 +39,7 @@ fetch("http://localhost:5000/adminusers",{
     Swal.fire({
       position: 'top-center',
       icon: 'success',
-      title: 'User Profile Updated Succesfully',
+      title: 'Your Profile Created Succesfully',
       showConfirmButton: false,
       timer: 1500
     });
@@ -58,14 +58,15 @@ fetch("http://localhost:5000/adminusers",{
  
      <div className="w2 regParent">
      <div className='regLogo'>
-           <img src="https://www.jatri.co/_nuxt/jatri-logo.19582a96.svg" alt="" />
+     <img className='logo' src="https://i.ibb.co.com/k1Dgx1Z/Screenshot-2024-12-29-232050-removebg-preview.png" alt="" />
+
     </div>
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
     </div>
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
     <div>
-  <p className='mt-4 text-2xl font-semibold'>Register in to Jatri</p>
+  <p className='mt-4 text-2xl text-center font-semibold'>Register in to Jabo</p>
 </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="card-body ">
@@ -85,14 +86,7 @@ fetch("http://localhost:5000/adminusers",{
           {errors.number && <span className="text-red-600">This field is required</span>}
         </div>
 
-        <div className="form-control">
-              <label className="label">
-                <span className="label-text">Photo URL</span>
-              </label>
-              {/* react-from-hook-uses */}
-              <input type="text"  {...register("photoURL", { required: true })} placeholder="PhotoURL" className="input input-bordered" required />
-              {errors.name && <span className="text-red-600">This field is required</span>}
-            </div>
+      
 
         <div className="form-control">
           <label className="label">
@@ -116,9 +110,9 @@ fetch("http://localhost:5000/adminusers",{
              
               {errors.password?.type === 'pattern' && <span className="text-red-600">At least one lowercase letter (a-z),At least one uppercase letter (A-Z),At least one digit (0-9),At least one special character from the set [@, $, !, %, *, ?, &],Minimum length of 6 characters</span>}
              
-          <label className="label">
+          {/* <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
+          </label> */}
         </div>
         <div className="form-control mt-6">
           <input className="btn btn-error aab" type="submit" value="Sign-in"/>
