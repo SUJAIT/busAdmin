@@ -117,7 +117,7 @@ fetch("http://localhost:5000/adminusers",{
         <div className="form-control mt-6">
           <input className="btn btn-error aab" type="submit" value="Sign-in"/>
         </div>
-     <span className='text-lg font-semibold'><span className='fontColor mr-2'>Already have an account?</span><Link className='text-sky-500' to={'/login'}>Login</Link></span>   
+     <span className='text-lg font-semibold'><span className='fontColor mr-2'>Already a have an account?</span><Link className='text-sky-500' to={'/login'}>Login</Link></span>   
       </form>
     </div>
   </div>
